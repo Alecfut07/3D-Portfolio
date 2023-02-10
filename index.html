@@ -4,10 +4,90 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Alec's 3D Portfolio</title>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- <div id="app"></div> -->
+    <canvas id="bg"></canvas>
+    <header>
+      <h1>Alec Ortega Cisneros</h1>
+      <p>Welcome to my 3D Portoflio!</p>
+    </header>
+    <main>
+      <blockquote>
+        <p>I'm 23 years old.</p>
+      </blockquote>
+      <section>
+        <h2>Manifesto</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
+          veniam nihil fuga tenetur recusandae esse provident voluptate
+          consectetur velit ipsum iste alias doloremque, vero est vitae magnam
+          fugiat at soluta?
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+          mollitia qui nulla vitae cumque placeat modi cupiditate, corrupti
+          fuga, libero assumenda magnam odio, voluptatem ut tempora. Maxime
+          accusamus eaque quam!
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+          mollitia qui nulla vitae cumque placeat modi cupiditate, corrupti
+          fuga, libero assumenda magnam odio, voluptatem ut tempora. Maxime
+          accusamus eaque quam!
+        </p>
+      </section>
+      <section class="light">
+        <h2>Projects</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+          mollitia qui nulla vitae cumque placeat modi cupiditate, corrupti
+          fuga, libero assumenda magnam odio, voluptatem ut tempora. Maxime
+          accusamus eaque quam!
+        </p>
+      </section>
+      <section class="light">
+        <h2>Accomplishments</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+          mollitia qui nulla vitae cumque placeat modi cupiditate, corrupti
+          fuga, libero assumenda magnam odio, voluptatem ut tempora. Maxime
+          accusamus eaque quam!
+        </p>
+      </section>
+      <blockquote>
+        <br>The best way out is always through <br>-Robert Frost</p>
+      </blockquote>
+      <section class="left">
+        <h2>Work history</h2>
+        <h3>Poly</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+          mollitia qui nulla vitae cumque placeat modi cupiditate, corrupti
+          fuga, libero assumenda magnam odio, voluptatem ut tempora. Maxime
+          accusamus eaque quam!
+        </p>
+      </section>
+      <blockquote>
+        <p>Thanks for watching!!!</p>
+      </blockquote>
+    </main>
     <script type="module" src="/main.js"></script>
+    <script>
+      javascript: (function () {
+        var script = document.createElement("script");
+        script.onload = function () {
+          var stats = new Stats();
+          document.body.appendChild(stats.dom);
+          requestAnimationFrame(function loop() {
+            stats.update();
+            requestAnimationFrame(loop);
+          });
+        };
+        script.src = "//mrdoob.github.io/stats.js/build/stats.min.js";
+        document.head.appendChild(script);
+      })();
+    </script>
   </body>
 </html>
