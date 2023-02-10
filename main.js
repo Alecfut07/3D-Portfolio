@@ -68,7 +68,7 @@ function addStar() {
   scene.add(star);
 }
 
-Array(200).fill().forEach(addStar);
+Array(400).fill().forEach(addStar);
 
 // space (Background)
 const spaceTexture = new THREE.TextureLoader().load("./img/space.jpeg");
@@ -94,8 +94,9 @@ const moon = new THREE.Mesh(
 );
 scene.add(moon);
 
-moon.position.z = 30;
-moon.position.setX(-10);
+moon.position.z = 15;
+moon.position.setX(10);
+moon.position.setY(-3);
 
 alec.position.setZ(-5);
 alec.position.setX(2);
@@ -103,13 +104,6 @@ alec.position.setX(2);
 // Scroll Animation
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-
-  moon.rotation.x += 0.05;
-  moon.rotation.y += 0.075;
-  moon.rotation.z += 0.05;
-
-  alec.rotation.y += 0.01;
-  alec.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
@@ -150,6 +144,11 @@ function animate() {
   torus.rotation.x += 0.01;
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
+
+  alec.rotation.y += 0.001;
+  alec.rotation.z += 0.001;
+
+  moon.rotation.y += 0.001;
 
   // controls.update();
 
