@@ -94,8 +94,8 @@ const moon = new THREE.Mesh(
 );
 scene.add(moon);
 
-moon.position.z = 15;
-moon.position.setX(10);
+moon.position.z = -15;
+moon.position.setX(-10);
 moon.position.setY(-3);
 
 alec.position.setZ(-5);
